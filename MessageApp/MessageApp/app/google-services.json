@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "703258320552",
+    "project_id": "tmsmessageapp",
+    "storage_bucket": "tmsmessageapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703258320552:android:1771f07bf065d5313eec9d",
+        "android_client_info": {
+          "package_name": "ge.tmaisuradze"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "703258320552-rh9vut9pjddtsl9g5t9u36ehcoqq43nd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqPqiWmd_liNeUPopFYW8-zJyZAUHKglI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "703258320552-rh9vut9pjddtsl9g5t9u36ehcoqq43nd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

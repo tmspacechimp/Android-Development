@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center">
+
+    <item
+        android:id="@+id/home_action"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home"
+        android:gravity="center_horizontal"
+        app:showAsAction="never"
+        app:iconTint="@color/icon_grey"
+        android:layout_gravity="center" />
+
+
+    <item
+        android:id="@+id/settings_action"
+        android:title="SETTINGS"
+        android:icon="@drawable/ic_settings"
+        android:gravity="center_horizontal"
+        app:showAsAction="ifRoom"
+        app:iconTint="@color/icon_grey"
+        android:layout_gravity="center"
+        />
+
+</menu>
