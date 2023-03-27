@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ToDoApp</string>
+    <string name="search_hint">Search your notes</string>
+    <string name="add_hint">Type name here</string>
+    <string name="list_item">List Item</string>
+    <string name="todo_description_hint">Enter Text Here</string>
+</resources>

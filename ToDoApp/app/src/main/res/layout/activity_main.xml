@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ToDoApplication"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/search_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="@string/search_hint"
+        android:inputType="textFilter"
+        android:paddingLeft="@dimen/small_margin"
+        android:textSize="@dimen/big_font_size"
+        android:background="@drawable/default_border"
+        />
+
+    <TextView
+        android:id="@+id/pinned_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pinned"
+        android:textColor="@color/border_grey"
+        android:textSize="@dimen/big_font_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_edit_text"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginBottom="@dimen/small_margin"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pinned_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pinned_text"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:spanCount="2"/>
+
+    <TextView
+        android:id="@+id/other_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/small_margin"
+        android:text="Other"
+        android:textColor="@color/border_grey"
+        android:textSize="@dimen/big_font_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pinned_rv"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/other_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/other_text" 
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:spanCount="2"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/white"
+        android:tint="@color/border_grey"
+        android:clickable="true"
+        app:borderWidth="0dp"
+        app:srcCompat="@drawable/ic_add"
+        android:onClick="addList"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
