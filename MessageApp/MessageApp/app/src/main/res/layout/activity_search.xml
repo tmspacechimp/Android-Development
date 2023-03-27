@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Search.SearchActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/search_app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:paddingVertical="@dimen/default_margin_small"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/default_margin_small">
+
+            <ImageView
+                android:layout_width="@dimen/default_icon_size_small"
+                android:layout_height="@dimen/default_icon_size_small"
+                android:src="@drawable/ic_back"
+                android:focusable="true"
+                app:tint="@color/white"
+                android:layout_gravity="center"
+                android:onClick="searchBackClicked"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/search_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="bottom"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingHorizontal="@dimen/default_margin_small"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin">
+
+
+                <LinearLayout
+                    android:id="@+id/search_search_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edit_text_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/default_margin_small">
+
+                    <ImageView
+                        android:layout_width="@dimen/default_icon_size_small"
+                        android:layout_height="@dimen/default_icon_size_small"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_search" />
+
+                    <EditText
+                        android:id="@+id/search_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/search"
+                        android:textSize="@dimen/default_text_size_medium" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_users_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_app_bar_layout"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
