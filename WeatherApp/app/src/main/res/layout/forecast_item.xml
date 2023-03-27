@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/weather_item_height"
+        android:paddingLeft="@dimen/default_margin">
+
+        <TextView
+            android:id="@+id/forecast_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 AM 08 May"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/forecast_image"
+            android:layout_width="@dimen/small_weather_icon_size"
+            android:layout_height="@dimen/small_weather_icon_size"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:src="@drawable/georgia"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/forecast_date"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/forecast_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:text="21"
+            android:textSize="@dimen/medium_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/forecast_image"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/forecast_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="broken clouds"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/forecast_temperature"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:textSize="@dimen/small_text_size"
+            android:textColor="@color/white"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

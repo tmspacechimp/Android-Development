@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Current"
+        android:id="@+id/current_icon"
+        android:icon="@drawable/today" />
+
+    <item android:title="Forecast"
+        android:id="@+id/forecast_icon"
+        android:icon="@drawable/hourly" />
+</menu>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tmaisuradze.example.weather.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/top_margin"
+        android:paddingBottom="@dimen/under_flags_margin"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/georgianFlag"
+            android:layout_width="@dimen/flag_size"
+            android:layout_height="@dimen/flag_size"
+            android:src="@drawable/georgia" />
+
+        <ImageView
+            android:id="@+id/ukFlag"
+            android:layout_width="@dimen/flag_size"
+            android:layout_height="@dimen/flag_size"
+            android:layout_marginHorizontal="@dimen/flag_horizontal_margin_between"
+            android:src="@drawable/uk" />
+
+        <ImageView
+            android:id="@+id/jamaicaFlag"
+            android:layout_width="@dimen/flag_size"
+            android:layout_height="@dimen/flag_size"
+            android:src="@drawable/jamaica" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="Tbilisi"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:textColor="@color/white"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/navBar"
+        app:layout_constraintTop_toBottomOf="@+id/cityName" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navbar_height"
+        app:backgroundTint="@color/navbar_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/navbar_menu"
+        app:labelVisibilityMode="unlabeled"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
